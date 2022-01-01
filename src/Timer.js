@@ -1,3 +1,4 @@
+import { Emitter } from "./Emitter.js";
 import { View } from "./View.js";
 
 const Timer = {
@@ -10,6 +11,8 @@ const Timer = {
   formatTime: time => String(time).padStart(2, "0"),
 
   init(time) {
+    Emitter.emit("countdown-start");
+
     Timer.time = time || Timer.time;
 
     Timer.currentTime = Timer.time;
@@ -29,6 +32,7 @@ const Timer = {
 
     if (Timer.currentTime === 0) {
       clearInterval(Timer.interval);
+      Emitter.emit("countdown-end");
       return;
     }
   }

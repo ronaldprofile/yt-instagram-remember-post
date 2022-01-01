@@ -17,6 +17,8 @@ body {
   align-items: center;
   justify-content: center;
   text-align: center;
+
+  background: rgba(0, 0, 0, 0.7);
 }
 
 span {
