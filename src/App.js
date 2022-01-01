@@ -22,7 +22,7 @@ const App = {
       Emitter.on("countdown-start", notify);
       Emitter.on("countdown-end", Timer.init);
 
-      Timer.init(1 * 60);
+      Timer.init();
     } catch (error) {
       alert(error.message);
     }

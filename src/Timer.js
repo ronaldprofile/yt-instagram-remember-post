@@ -8,7 +8,7 @@ const Timer = {
 
   timeToMinutes: time => Math.floor(time / 60),
   timeToSeconds: time => time % 60,
-  formatTime: time => String(time).padStart(2, "0"),
+  formatTime: time => String(time).padStart(2, "0").split(""),
 
   init(time) {
     Emitter.emit("countdown-start");
@@ -22,13 +22,18 @@ const Timer = {
   countdown() {
     Timer.currentTime = Timer.currentTime - 1;
 
-    const minutes = Timer.formatTime(Timer.timeToMinutes(Timer.currentTime));
-    const seconds = Timer.formatTime(Timer.timeToSeconds(Timer.currentTime));
+    const [minutesLeft, minutesRight] = Timer.formatTime(
+      Timer.timeToMinutes(Timer.currentTime)
+    );
 
-    View.render({
-      minutes,
-      seconds
-    });
+    const [secondsLeft, secondsRight] = Timer.formatTime(
+      Timer.timeToSeconds(Timer.currentTime)
+    );
+
+    const minutes = { minutesLeft, minutesRight };
+    const seconds = { secondsLeft, secondsRight };
+
+    View.render(minutes, seconds);
 
     if (Timer.currentTime === 0) {
       clearInterval(Timer.interval);

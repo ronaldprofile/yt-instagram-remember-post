@@ -1,0 +1,99 @@
+:root {
+  --body-background: #e5e5e5;
+  --white: #ffffff;
+  --title-color: #2e384d;
+  --shadow: 0px 0px 60px rgba(0, 0, 0, 0.05);
+  --border: 5px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100vh;
+}
+
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font: 300 1rem "Inter", sans-serif;
+  text-align: center;
+  background: var(--body-background);
+}
+
+.title {
+  margin-bottom: 2rem;
+  font-size: 2.5rem;
+  color: var(--title-color);
+  font-weight: 600;
+}
+
+.countdownContainer {
+  width: 400px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: var(--title-color);
+  font-family: "Rajdhani";
+  font-weight: 600;
+}
+
+.countdownContainer > div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  background-color: var(--white);
+  font-size: 10rem;
+  text-align: center;
+  -webkit-box-shadow: var(--shadow);
+          box-shadow: var(--shadow);
+  border-radius: var(--border);
+}
+
+.countdownContainer > div span {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.countdownContainer > div span:first-child {
+  border-right: 1px solid #f0f1f3;
+}
+
+.countdownContainer > div span:last-child {
+  border-left: 1px solid #f0f1f3;
+}
+
+.countdownContainer .separator {
+  font-size: 7rem;
+  margin: 0 0.5rem;
+}
+/*# sourceMappingURL=main.css.map */
