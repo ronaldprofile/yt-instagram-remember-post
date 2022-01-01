@@ -1,17 +1,14 @@
 import { Emitter } from "./Emitter.js";
-import { Messages } from "./Messages.js";
+import { sortMessage } from "./Messages.js";
 import { Notifier } from "./Notifier.js";
 import { Timer } from "./Timer.js";
 
-// challenge next level
-const messagesAlreadyUsed = [];
-
 const notify = () => {
-  const indexMessage = Math.floor(Math.random() * Messages.length);
+  const message = sortMessage();
 
   const notification = Notifier.notify({
     title: "Instagram remember",
-    message: Messages[indexMessage]
+    message
   });
 
   notification();
@@ -25,7 +22,7 @@ const App = {
       Emitter.on("countdown-start", notify);
       Emitter.on("countdown-end", Timer.init);
 
-      Timer.init(0.1 * 60);
+      Timer.init(1 * 60);
     } catch (error) {
       alert(error.message);
     }

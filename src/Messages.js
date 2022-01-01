@@ -1,4 +1,4 @@
-const Messages = [
+let Messages = [
   "Postar uma foto do meu setup",
   "Postar uma frase motivacional",
   "Indicar uma comunidade de estudos",
@@ -9,4 +9,10 @@ const Messages = [
   "Falar sobre a técnica do active recall"
 ];
 
-export { Messages };
+const sortMessage = () => {
+  const indexMessage = Math.floor(Math.random() * Messages.length);
+
+  return Messages[indexMessage];
+};
+
+export { sortMessage };
