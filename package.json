@@ -1,0 +1,14 @@
+{
+  "name": "post-instagram-remenber",
+  "version": "1.0.0",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "repository": "git@github.com:ronaldprofile/yt-instagram-remember-post.git",
+  "author": "Ronald Tomaz <ronaldtmprofile@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "electron": "^16.0.5"
+  }
+}
