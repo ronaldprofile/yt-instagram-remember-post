@@ -1,9 +1,10 @@
 {
   "name": "post-instagram-remenber",
   "version": "1.0.0",
-  "main": "main.js",
+  "main": "electron/main.js",
   "scripts": {
-    "start": "electron ."
+    "start": "electron .",
+    "build": "npx electron-packager . --icon assets/instagram.icns --out=packages"
   },
   "repository": "git@github.com:ronaldprofile/yt-instagram-remember-post.git",
   "author": "Ronald Tomaz <ronaldtmprofile@gmail.com>",
